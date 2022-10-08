@@ -33,9 +33,6 @@ controller.player2.onEvent(ControllerEvent.Connected, function () {
 scene.onOverlapTile(SpriteKind.Player, assets.tile`我的貼圖3`, function (sprite, location) {
     gameover()
 })
-info.onCountdownEnd(function () {
-    gameover()
-})
 info.onLifeZero(function () {
     gameover()
 })
@@ -71,27 +68,9 @@ if (map == 1) {
     tiles.setCurrentTilemap(tilemap`層級11`)
 }
 info.setLife(3)
-info.startCountdown(180)
 controller.moveSprite(mySprite)
 scene.cameraFollowSprite(mySprite)
 tiles.placeOnRandomTile(mySprite, assets.tile`我的貼圖`)
-forever(function () {
-    if (controller.left.isPressed()) {
-        animation.runImageAnimation(
-        mySprite2,
-        assets.animation`我的動畫`,
-        200,
-        true
-        )
-    } else if (controller.right.isPressed()) {
-        animation.runImageAnimation(
-        mySprite2,
-        assets.animation`我的動畫0`,
-        200,
-        true
-        )
-    }
-})
 forever(function () {
     if (controller.left.isPressed()) {
         animation.runImageAnimation(
