@@ -3,7 +3,9 @@
     "version": "1.2.0",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "Color Fading": "github:jwunderl/pxt-color#v0.2.2",
+        "animation": "*"
     },
     "files": [
         "main.blocks",
