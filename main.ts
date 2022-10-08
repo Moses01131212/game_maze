@@ -65,10 +65,6 @@ if (map == 1) {
     tiles.setCurrentTilemap(tilemap`層級8`)
 } else if (map == 3) {
     tiles.setCurrentTilemap(tilemap`層級11`)
-} else if (false) {
-	
-} else {
-	
 }
 info.setLife(3)
 controller.moveSprite(mySprite)
