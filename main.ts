@@ -1,6 +1,5 @@
 scene.onHitWall(SpriteKind.Player, function (sprite, location) {
     info.changeLifeBy(-1)
-    pause(100)
     tiles.placeOnRandomTile(mySprite, assets.tile`我的貼圖`)
     pause(2000)
 })
@@ -30,9 +29,15 @@ controller.player2.onEvent(ControllerEvent.Connected, function () {
     info.player2.setLife(3)
     tiles.placeOnRandomTile(mySprite2, assets.tile`我的貼圖`)
 })
-info.onLifeZero(function () {
-    game.over(false, effects.blizzard)
+scene.onOverlapTile(SpriteKind.Player, assets.tile`我的貼圖3`, function (sprite, location) {
+    gameover()
 })
+info.onLifeZero(function () {
+    gameover()
+})
+function gameover () {
+    game.over(false, effects.blizzard)
+}
 let mySprite2: Sprite = null
 let mySprite: Sprite = null
 mySprite = sprites.create(img`
@@ -53,7 +58,14 @@ mySprite = sprites.create(img`
     . . c b d d d d d 5 5 5 b b . . 
     . . . c c c c c c c c b b . . . 
     `, SpriteKind.Player)
-tiles.setCurrentTilemap(tilemap`層級4`)
+let map = randint(1, 2)
+if (map == 1) {
+    tiles.setCurrentTilemap(tilemap`層級4`)
+} else if (map == 2) {
+    tiles.setCurrentTilemap(tilemap`層級8`)
+} else {
+	
+}
 tiles.placeOnRandomTile(mySprite, assets.tile`我的貼圖`)
 controller.moveSprite(mySprite)
 scene.cameraFollowSprite(mySprite)
