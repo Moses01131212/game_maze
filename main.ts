@@ -58,15 +58,17 @@ mySprite = sprites.create(img`
     . . c b d d d d d 5 5 5 b b . . 
     . . . c c c c c c c c b b . . . 
     `, SpriteKind.Player)
-let map = randint(1, 2)
+let map = randint(1, 3)
 if (map == 1) {
     tiles.setCurrentTilemap(tilemap`層級4`)
 } else if (map == 2) {
     tiles.setCurrentTilemap(tilemap`層級8`)
+} else if (map == 3) {
+    tiles.setCurrentTilemap(tilemap`層級11`)
 } else {
 	
 }
-tiles.placeOnRandomTile(mySprite, assets.tile`我的貼圖`)
+info.setLife(3)
 controller.moveSprite(mySprite)
 scene.cameraFollowSprite(mySprite)
-info.setLife(3)
+tiles.placeOnRandomTile(mySprite, assets.tile`我的貼圖`)
