@@ -2,7 +2,6 @@ scene.onHitWall(SpriteKind.Player, function (sprite, location) {
     tiles.placeOnRandomTile(mySprite, assets.tile`我的貼圖`)
     info.changeLifeBy(-1)
     music.wawawawaa.playUntilDone()
-    pause(2000)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`我的貼圖2`, function (sprite, location) {
     game.over(true, effects.starField)
