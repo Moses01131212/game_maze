@@ -1,3 +1,4 @@
+// by Mo Chit 巫喆
 scene.onHitWall(SpriteKind.Player, function (sprite, location) {
     tiles.placeOnRandomTile(mySprite, assets.tile`我的貼圖`)
     info.changeLifeBy(-1)
