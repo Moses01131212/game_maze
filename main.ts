@@ -142,7 +142,7 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . b b c c c c c c c c . . . 
         . . . . . . . . . . . . . . . . 
         `],
-    200,
+    100,
     true
     )
 })
@@ -255,7 +255,7 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . c c c c c c c c b b . . . 
         . . . . . . . . . . . . . . . . 
         `],
-    200,
+    100,
     true
     )
 })
