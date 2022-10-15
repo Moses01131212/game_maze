@@ -30,9 +30,6 @@ controller.player2.onEvent(ControllerEvent.Connected, function () {
     info.player2.setLife(3)
     tiles.placeOnRandomTile(mySprite2, assets.tile`我的貼圖`)
 })
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    game.reset()
-})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`我的貼圖3`, function (sprite, location) {
     gameover()
 })
