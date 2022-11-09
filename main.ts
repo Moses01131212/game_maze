@@ -4,8 +4,8 @@ scene.onHitWall(SpriteKind.Player, function (sprite, location) {
     info.changeLifeBy(-1)
     if (info.life() != 0) {
         music.wawawawaa.playUntilDone()
+        tiles.placeOnRandomTile(mySprite2, assets.tile`我的貼圖`)
     }
-    tiles.placeOnRandomTile(mySprite2, assets.tile`我的貼圖`)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`我的貼圖2`, function (sprite, location) {
     game.over(true, effects.starField)
