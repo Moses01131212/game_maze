@@ -474,7 +474,7 @@ mySprite = sprites.create(img`
     . . c b d d d d d 5 5 5 b b . . 
     . . . c c c c c c c c b b . . . 
     `, SpriteKind.Player)
-let map = randint(1, 4)
+let map = randint(1, 5)
 if (map == 1) {
     tiles.setCurrentTilemap(tilemap`層級4`)
 } else if (map == 2) {
@@ -483,6 +483,8 @@ if (map == 1) {
     tiles.setCurrentTilemap(tilemap`層級11`)
 } else if (map == 4) {
     tiles.setCurrentTilemap(tilemap`層級13`)
+} else if (map == 5) {
+    tiles.setCurrentTilemap(tilemap`層級14`)
 }
 info.setLife(3)
 controller.moveSprite(mySprite)
