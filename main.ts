@@ -1,4 +1,4 @@
-// by Mo Chit 巫喆 v4.1.1
+// by Mo Chit 巫喆 v4.2.0
 scene.onHitWall(SpriteKind.Player, function (sprite, location) {
     tiles.placeOnRandomTile(mySprite, assets.tile`我的貼圖`)
     info.changeLifeBy(-1)
@@ -474,8 +474,9 @@ mySprite = sprites.create(img`
     . . c b d d d d d 5 5 5 b b . . 
     . . . c c c c c c c c b b . . . 
     `, SpriteKind.Player)
-let map = randint(1, 5)
-//層級
+
+// 層級
+let map = randint(1, 6)
 if (map == 1) {
     tiles.setCurrentTilemap(tilemap`層級4`)
 } else if (map == 2) {
@@ -486,8 +487,10 @@ if (map == 1) {
     tiles.setCurrentTilemap(tilemap`層級13`)
 } else if (map == 5) {
     tiles.setCurrentTilemap(tilemap`層級14`)
+} else if (map == 6) {
+    tiles.setCurrentTilemap(tilemap`層級0`)
 }
-//
+
 info.setLife(3)
 controller.moveSprite(mySprite)
 scene.cameraFollowSprite(mySprite)
